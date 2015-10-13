@@ -9,6 +9,7 @@
 #include <time.h>
 #include <array>
 #include <Windows.h>
+#include "TemplateOfBus.h"
 
 using namespace std;
 
@@ -23,7 +24,7 @@ using namespace std;
 int _tmain(int argc, _TCHAR* argv[])
 {
 	setlocale(0,"");
-	Bus obj1;
+	/*Bus obj1;
 
 	Bus obj2("Сидоров Н. А.",20,25,"Isuzu",1956,30000);
 	Bus obj3("Петров П. Т.",30,35,"PAZ",2003,30000);
@@ -88,9 +89,19 @@ int _tmain(int argc, _TCHAR* argv[])
 	
 
 	obj1 = obj5;
-	obj1.showInfo();
+	obj1.showInfo();*/
+	Bus obj2("Сидоров Н. А.",20,25,"Isuzu",1956,30000);
+	Bus obj3("Петров П. Т.",30,35,"PAZ",2003,30000);
+	//obj.showInfo();
+	TemplateOfBus<Bus> obj(obj2);
+    TemplateOfBus<Bus> obj1(obj2);
+    bool a;
+
+    a = obj1 == obj;
+
+    cout << a;
 	return 0;
 	
-	ArrayOfObjects.~Mas();
+	//ArrayOfObjects.~Mas();
 }
 

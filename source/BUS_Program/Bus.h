@@ -6,7 +6,7 @@
 #include <time.h>
 using namespace std;
 
-
+//main class
 class Bus
 	{
 		private:
@@ -54,7 +54,7 @@ class Bus
 			string getSurname()const;
 
 			void setBusNumber(int );
-			unsigned int getBusNumber()const;
+			 int getBusNumber();
 
 			void setRoute( int);
 			unsigned int getRoute()const;
@@ -67,8 +67,19 @@ class Bus
 
 			void setRun(int );
 			unsigned int getRun()const;
-
+			
 			unsigned int GetBusAge()const;
+
+			Bus operator+(Bus obj1)
+			{
+				strcat(this->brand, obj1.brand);
+				this->driverSurname.append( obj1.driverSurname);
+				this->busNumber+= obj1.busNumber;
+				this->route+=obj1.route;
+				this->year+=obj1.run;
+				this->run+=obj1.run;
+				return *this;
+			}
 
 			
 		   

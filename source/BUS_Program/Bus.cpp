@@ -36,7 +36,7 @@ void Bus::setBusNumber( int num)
 	else busNumber = num;
 }
 
-inline unsigned int Bus::getBusNumber() const
+ int Bus::getBusNumber() 
 	{
 		return busNumber;
 	}
